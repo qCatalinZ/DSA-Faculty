@@ -1,0 +1,184 @@
+#include <bits/stdc++.h>
+#include <iostream>
+#include <cmath>
+using  namespace std;
+
+template<class T>
+class BST;
+
+template<class T>
+class Node
+{
+    T data;
+    Node<T>*left,*right;
+    int childs;
+
+public:
+
+    Node():left(nullptr),right(nullptr),childs(0){}
+    Node(const T&x):data(x),left(nullptr),right(nullptr),childs(0){}
+    ~Node()
+    {
+        if(left)
+            delete left;
+        if(right)
+            delete right;
+    }
+
+    friend class BST<T>;
+
+    void insert(const T&x)
+    {
+      //  childs++;
+        if(data==x)
+            return;
+
+         childs++;
+        if(x<data)
+        {
+            if(left)
+                left->insert(x);
+            else
+            {
+                left=new Node<T>(x);
+                return;
+            }
+        }
+        if(x>data)
+        {
+            if(right)
+                right->insert(x);
+            else
+            {
+                right=new Node<T>(x);
+                return;
+            }
+        }
+    }
+
+    void InOrder()
+    {
+        if(left)
+            left->InOrder();
+        cout<<data<<" copii: "<<childs<<endl;
+        if(right)
+            right->InOrder();
+    }
+
+    void dist(int &d)
+    {
+        d++;
+        if(left== nullptr && right== nullptr)
+        {
+            return;
+        }
+
+        if(left && right== nullptr)
+        {
+            left->dist(d);
+        }
+
+        if(left== nullptr && right)
+        {
+            right->dist(d);
+        }
+
+        if(left && right)
+        {
+            int l=0,r=0;
+            left->dist(l);
+            right->dist(r);
+            int max=(l>r)?l:r;
+            d=d+max;
+            return;
+        }
+    }
+
+    void solve(T&x)
+    {
+        if(left== nullptr && right== nullptr)
+        {
+            x=data;
+            return;
+        }
+        if(left && right== nullptr)
+        {
+            left->solve(x);
+        
+        }
+        if(left== nullptr && right)
+        {
+            right->solve(x);
+            
+        }
+        if(left && right)
+        {
+            int dl=0;
+            int dr=0;
+            left->dist(dl);
+            right->dist(dr);
+            if(dl<=dr)
+                right->solve(x);
+            else if(dl>dr)
+                left->solve(x);
+        }
+    }
+
+};
+
+template <class T>
+class BST
+{
+    Node<T>*root;
+
+public:
+    BST():root(nullptr){}
+    ~BST()
+    {
+        if(root)
+            delete root;
+    }
+
+    void insert(const T&x)
+    {
+        if(root== nullptr)
+        {
+            root=new Node<T>(x);
+            return;
+        }
+        root->insert(x);
+    }
+
+    void InOrder()
+    {
+        if(root)
+            root->InOrder();
+    }
+
+    void solve(T &x)
+    {
+        if(root)
+        {
+            root->solve(x);
+        }
+    }
+
+};
+
+int main()
+{
+    int n;
+    cin>>n;
+    BST<int> myTree;
+    for(int i=0;i<n;++i)
+    {
+        int aux;
+        cin>>aux;
+        myTree.insert(aux);
+    }
+    int nod;
+    myTree.solve(nod);
+    cout<<nod;
+
+    return 0;
+}

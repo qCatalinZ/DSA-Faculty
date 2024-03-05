@@ -1,0 +1,24 @@
+Se consideră structura/clasa Elev ce conține datele membre: Nume, notaMate, notaRomana,
+ notaFizica. Notele sunt numere întregi, între 0 și 10. Se citesc N obiecte de tip Elev. Sa se
+ determine și să se se afișează numele elevului median, adică elevul de la mijlocul șirului sortat.
+ Sortarea se face descrescător după media notelor. Dacă media este egală, atunci se ordonează
+ descrescător după notaMate, dacă și aceasta este egală, se face ordonare descrescător după
+ NotaRomana, care dacă și acestea sunt egale se face ordonarea alfabetic după Nume. Dacă
+ lungimea șirului este impara, atunci jumătatea este (n+1)/2, iar dacă e para atunci jumătatea
+ este n/2.
+ Exemplu
+ 5
+ MIHNEA 8 9 8
+ MIRCEA 8 8 9
+ ANDREI 9 8 8
+ BOGDAN 9 8 8
+ ANCA 10 10 10
+ Ieșire:
+ BOGDAN
+ Explicație:
+ Elevii sortați sunt:
+ ANCA ANDREI BOGDANMIHNEAMIRCEA
+ ANCA are media 10, cea mai mare și ceilalți elevi au media 8,33. BOGDAN și ANDREI au
+ aceleași note și nota mai mare la matematică decât ceilalți. ANDREI este alfabetic în fața lui
+ BOGDAN. MIHNEA are aceeași medie și notă la mate cu MIRCEA, dar MIHNEA are nota la
+ română mai mare.

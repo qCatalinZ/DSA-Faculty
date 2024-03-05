@@ -1,0 +1,16 @@
+* Aplicația se va rezolva folosind tehnici de programare generica si liste! Fără STL*
+
+
+
+Se considera eșantioanele unui semnal stocate a valori întregi într-o lista simplu înlănțuita.
+
+Se definește metoda Prelucrare care: (a) daca 2 eșantioane succesive au diferența absoluta mai mare decât pragul P1, atunci inserează intre ele un eșantion (nod in lista) cu valoarea 
+egala cu media aritmetica a celor 2 eșantioane; (b) daca 2 eșantioane succesive au diferența absoluta mai mica decât pragul P2, atunci al doilea eșantion (nod in lista) este eliminat.
+
+Se repeta procesul pana când nu mai este posibila nicio modificare a semnalului.
+
+Solutia se completeaza in fisierul List.h
+Se completeaza toate functiile (metode) cerute. Nu se modifica numele deja existente
+Daca este necesar se pot adauga alte metode/date proprii.
+
+NU trebuie implementată functia main, nici alte functii sepatate. Strict numai clasa List, Node si mai ales functia din cerință (membră a clasei List)

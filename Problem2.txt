@@ -1,0 +1,19 @@
+Descriere
+ Definiți o structură de date Student formată din nume, șir de maxim 30 de caractere și nota,
+ număr real garantat între 0 și 10. Citiți N studenți și afișați primul student în ordine alfabetică.
+ Dacă sunt mai mulți cu același nume, afișați-l pe cel cu medie mai mare.
+ Date de intrare
+ Pe prima linie N.
+ Pe următoarea linie, separate prin spațiu, informații pentru N studenți în ordinea:
+ NUMENOTA.
+ Date de ieșire
+ Pe prima linie, separate prin spațiu, un șir de caractere și un număr real cu 2 zecimale,
+ numele studentului cerut în descriere și nota lui.
+ Exemplu
+ Intrare:
+ 5
+ RACO5.2 IONESCU 7 POPESCU3.3 IONESCU 7.2 POPESCU 8.1
+ Ieșire:
+ IONESCU 7.2
+ Restricții și precizări
+ N este cel mult 1000.

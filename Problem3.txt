@@ -1,0 +1,9 @@
+Se citește de la tastatură un șir de valori întregi ce reprezintă parcurgerea în preordine a unui
+ arbore binar de căutare BST clasic (ordinea de construire este St<R<Dr, dinamic, nebalansat).
+ Se construiește BST-ul și apoi se afișează șirul de valori obținut prin parcurgerea sa în
+ postordine. Afișați spațiu și după ultima valoare.
+ Exemplu:
+ 9
+ 10 5 3 7 6 9 12 11 17
+ Ieșire:
+ 3 6 9 7 5 11 17 12 10

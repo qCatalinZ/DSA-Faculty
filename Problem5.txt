@@ -1,0 +1,12 @@
+Se construiește o lista cu alocare dinamica, simplu înlănțuita si circulara. În fiecare nod al listei
+ se stochează coordonatele unui punct din plan (x, y). Astfel, lista circulare reprezintă un poligon
+ in plan, a cărui vârfuri sunt stocate în nodurile listei.
+ Să se afișeze perimetrul poligonului
+ Date de intrare
+ N
+ N perechi de 2 numere reale, coordonatele vârfurilor în ordine
+ P1 P2
+ Restricții și precizări
+ Se folosește tipul de date double pentru calculul cu numere reale.
+ Afișați numerele reale cu o precizie de 2 zecimale.
+ Se garantează că nu vor fi mai puțin de 2 vârfuri la început sau pe durata procesării.

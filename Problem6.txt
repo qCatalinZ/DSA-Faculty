@@ -1,0 +1,15 @@
+Se construiește un BST cu alocare dinamică pe baza unui șir de valori întregi citite de la
+ tastatura. Valorile sunt garantat distincte.
+ 1) Să se afișeze valoarea care se află la distanța maximă fata de rădăcină (distanța– lungimea
+ drumului de la rădăcină la nod). Dacă sunt mai multe valori aflate la distanța maximă, se va afișa
+ cea mai mare dintre ele.
+ 2) Să se găsească gradul de rudenie maxim pentru orice pereche de 2 noduri din BST.
+ Date de intrare
+ N
+ Nvalori întregi distincte
+ Exemplu
+ 9
+ 100 150 30 25 50 40 27 29 35
+ Ieșire
+ 1) 35
+ 2) 6
